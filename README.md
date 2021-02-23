@@ -3,9 +3,9 @@ TweetMap is a visualization tool to see where tweets are being sent from across 
 
 ## Screenshots
 ![alt text](https://github.com/sondr0p/TweetDjango/blob/master/screenshots/beach.png)
-![alt text](https://github.com/sondr0p/TwitterHeatmap/blob/master/screenshots/cali.png)
-![alt text](https://github.com/sondr0p/TwitterHeatmap/blob/master/screenshots/home.png)
-![alt text](https://github.com/sondr0p/TwitterHeatmap/blob/master/screenshots/houston.png)
+![alt text](https://github.com/sondr0p/TweetDjango/blob/master/screenshots/cali.png)
+![alt text](https://github.com/sondr0p/TweetDjango/blob/master/screenshots/home.png)
+![alt text](https://github.com/sondr0p/TweetDjango/blob/master/screenshots/houston.png)
 
 ## Requirements
 - Django Web Framework w/ any db (I chose PostgreSQL)
