@@ -1,0 +1,40 @@
+{% extends "heatmap/base.html" %}
+{% block content %}
+    <div class="form-group">
+        <form action="/search/" class="form-inline mt-2 mt-md-0 search" method="POST">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2" type="text" placeholder="Search by hashtag" aria-label="Search" name="hashtag">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        {% include "heatmap/map.html" %}
+    </div>
+    
+    {% block script %}
+        <script>
+        var loc = window.location
+        var wsStart = 'ws://' 
+        if(loc.protocol == 'https:'){
+            wsStart = 'wss://'
+        }
+
+        var endpoint = wsStart + window.location.host + window.location.pathname
+        var socket = new WebSocket(endpoint)
+        
+        
+        socket.onmessage = function(e){
+            console.log("message", e)
+        }
+        socket.onopen = function(e){
+            console.log("open", e)
+        }
+        socket.onerror = function(e){
+            console.log("error", e)
+        }
+        socket.onclose = function(e){
+            console.log("close", e)
+        }
+
+        </script>
+    {% endblock script%}
+    
+{% endblock content %}
